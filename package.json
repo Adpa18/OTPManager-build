@@ -1,0 +1,23 @@
+{
+  "name": "Requireis",
+  "description": "Requireis generate OTP HOTP / TOTP",
+  "homepage": "https://adpa18.github.io/otp-manager",
+  "version": "1.0.0",
+  "author": "Adrien WERY <adrien.wery@epitech.eu>",
+  "main": "main.js",
+  "build": {
+    "appId": "WD.DHIWERY.requireis",
+    "build.mac.category": "public.app-category.productivity",
+    "dmg": {},
+    "win": {}
+  },
+  "scripts": {
+    "start": "electron ./app --enable-logging",
+    "dev": "NODE_ENV='development' npm run start",
+    "buildLinux": "build -l AppImage deb rpm --x64",
+    "buildWindows": "build -w --x64"
+  },
+  "devDependencies": {
+    "electron": "^1.4.6"
+  }
+}
