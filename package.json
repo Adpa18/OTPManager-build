@@ -1,22 +1,24 @@
 {
-  "name": "Requireis",
-  "description": "Requireis generate OTP HOTP / TOTP",
-  "homepage": "https://adpa18.github.io/otp-manager",
-  "version": "1.0.0",
-  "author": "Adrien WERY <adrien.wery@epitech.eu>",
-  "main": "main.js",
-  "build": {
-    "appId": "WD.DHIWERY.requireis",
-    "build.mac.category": "public.app-category.productivity",
-    "dmg": {},
-    "win": {}
-  },
-  "scripts": {
-    "buildLinux": "./node_modules/electron-builder/out/build-cli.js -l AppImage deb rpm freebsd pacman p5p apk 7z zip tar.xz tar.lz tar.gz tar.bz2 --ia32 --x64",
-    "buildWindows": "node .\\node_modules\\electron-builder\\out\\build-cli.js -w --ia32 --x64"
-  },
-  "devDependencies": {
-    "electron": "^1.4.6",
-    "electron-builder": "*"
-  }
+    "name": "Requireis",
+    "description": "Requireis generate OTP HOTP / TOTP",
+    "homepage": "https://adpa18.github.io/otp-manager",
+    "version": "1.0.0",
+    "author": "Adrien WERY <adrien.wery@epitech.eu>",
+    "main": "main.js",
+    "build": {
+        "appId": "WD.DHIWERY.requireis",
+        "build.mac.category": "public.app-category.productivity",
+        "dmg": {},
+        "win": {
+            "msi": true
+        }
+    },
+    "scripts": {
+        "buildLinux": "./node_modules/electron-builder/out/build-cli.js -l AppImage deb rpm freebsd pacman p5p apk 7z zip tar.xz tar.lz tar.gz tar.bz2 --ia32 --x64",
+        "buildWindows": "node .\\node_modules\\electron-builder\\out\\build-cli.js -w nsis squirrel --ia32 --x64"
+    },
+    "devDependencies": {
+        "electron": "^1.4.6",
+        "electron-builder": "*"
+    }
 }
