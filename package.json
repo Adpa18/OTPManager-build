@@ -11,10 +11,11 @@
         "dmg": {},
         "win": {
             "msi": true
-        }
+        },
+        "linux": {}
     },
     "scripts": {
-        "buildLinux": "./node_modules/electron-builder/out/build-cli.js -l AppImage deb rpm freebsd pacman p5p apk 7z zip tar.xz tar.lz tar.gz tar.bz2 --ia32 --x64",
+        "buildLinux": "./node_modules/electron-builder/out/build-cli.js -l AppImage deb rpm p5p apk 7z zip tar.xz tar.lz tar.gz tar.bz2 freebsd pacman --ia32 --x64",
         "buildWindows": "node .\\node_modules\\electron-builder\\out\\build-cli.js -w nsis squirrel --ia32 --x64"
     },
     "devDependencies": {
