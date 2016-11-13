@@ -12,12 +12,11 @@
     "win": {}
   },
   "scripts": {
-    "start": "electron ./app --enable-logging",
-    "dev": "NODE_ENV='development' npm run start",
-    "buildLinux": "build -l AppImage deb rpm --x64",
-    "buildWindows": "build -w --x64"
+    "buildLinux": "./node_modules/electron-builder/out/build-cli.js -l AppImage deb rpm --x64",
+    "buildWindows": "./node_modules/electron-builder/out/build-cli.js -w --x64"
   },
   "devDependencies": {
-    "electron": "^1.4.6"
+    "electron": "^1.4.6",
+    "electron-builder": "*"
   }
 }
