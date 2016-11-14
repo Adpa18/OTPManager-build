@@ -1,12 +1,12 @@
 {
-    "name": "Requireis",
-    "description": "Requireis generate OTP HOTP / TOTP",
+    "name": "OTPManager",
+    "description": "OTP Manager generate OTP HOTP / TOTP",
     "homepage": "https://adpa18.github.io/otp-manager",
     "version": "1.0.0",
     "author": "Adrien WERY <adrien.wery@epitech.eu>",
     "main": "main.js",
     "build": {
-        "appId": "WD.DHIWERY.requireis",
+        "appId": "WD.DHIWERY.otp-manager",
         "build.mac.category": "public.app-category.productivity",
         "dmg": {},
         "win": {
@@ -15,7 +15,7 @@
         "linux": {}
     },
     "scripts": {
-        "buildLinux": "./node_modules/electron-builder/out/build-cli.js -l AppImage deb rpm p5p apk 7z zip tar.xz tar.lz tar.gz tar.bz2 freebsd pacman --ia32 --x64",
+        "buildLinux": "./node_modules/electron-builder/out/build-cli.js -l AppImage deb rpm 7z zip tar.xz tar.lz tar.gz tar.bz2 freebsd pacman p5p apk --ia32 --x64",
         "buildWindows": "node .\\node_modules\\electron-builder\\out\\build-cli.js -w nsis squirrel --ia32 --x64"
     },
     "devDependencies": {
